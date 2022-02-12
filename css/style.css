@@ -205,9 +205,14 @@ header {
 }
 
 .navbar-brand {
-    /* width: auto; */
+    width: auto;
     margin-right: 0;
 }
+
+
+/*.navbar-brand img{
+	max-width: 70%;
+}*/
 
 .navbar-expand-lg .navbar-nav {
     display: flex;
@@ -990,9 +995,13 @@ strong {
 
 .navbar-light .navbar-brand {
     max-width: inherit;
-    width: 15%;
+    width: 170px;
     float: left;
     padding: 0;
+}
+
+.navbar-light .navbar-brand img {
+    max-width: 100%;
 }
 
 .contact-info-box .container {
@@ -2707,7 +2716,7 @@ strong {
         padding: 60px 0 0;
     }
     .navbar-brand img {
-        max-width: 100%;
+        max-width: 60%;
     }
     .navbar-toggler img {
         max-width: 70%;
