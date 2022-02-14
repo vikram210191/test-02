@@ -9,6 +9,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_4Rl7BNXv1VJXri9gjxzpM");
+        })();
+    </script>
+
     <!---====== Fonts =====-->
     <link rel="stylesheet" href="css/fonts.css">
 
@@ -443,11 +450,11 @@
                                             <span class="full-info">letstalk@upamanyu.me</span>
                                         </li>
                                         <li class="sm-icons">
-                                            <a href="#" class="call"><img src="images/phone.png" class="img-fluid"></a>
-                                            <a href="#" class="call"><img src="images/whatsapp.png" class="img-fluid"></a>
-                                            <a href="#" class="call"><img src="images/instagram.png" class="img-fluid"></a>
-                                            <a href="#" class="call"><img src="images/facebook.png" class="img-fluid"></a>
-                                            <a href="#" class="call"><img src="images/linked_in.png" class="img-fluid"></a>
+                                            <!-- <a href="#" class="call"><img src="images/phone.png" class="img-fluid"></a> -->
+                                            <a href="https://wa.link/4mfwmu" class="call"><img src="images/whatsapp.png" class="img-fluid"></a>
+                                            <a href="https://www.instagram.com/upamanyusushma/" class="call"><img src="images/instagram.png" class="img-fluid"></a>
+                                            <!-- <a href="#" class="call"><img src="images/facebook.png" class="img-fluid"></a> -->
+                                            <a href="https://www.linkedin.com/in/upamanyu-naskar-58664437/" class="call"><img src="images/linked_in.png" class="img-fluid"></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -469,7 +476,7 @@
                             <p class="text-black">Quisque ornare metus eu neque suscipit auctor. Cras fermentum ultricies libero, at ultricies enim feugiat vitae. </p>
                         </div>
 
-                        <div class="contact-form wow fadeInUp">
+                        <div class="contact-form">
 
                             <div class="row">
 
@@ -483,7 +490,7 @@
                                             <!--Grid column-->
                                             <div class="col-md-6">
                                                 <div class="md-form mb-0">
-                                                    <input type="text" placeholder="Name" id="name" name="name" class="form-control">
+                                                    <input type="text" id="name" placeholder="Name" name="name" class="form-control">
 
                                                 </div>
                                             </div>
@@ -505,13 +512,13 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="md-form mb-0">
-                                                    <input type="tel" id="subject" placeholder="Phone Number" name="subject" class="form-control">
+                                                    <input type="tel" id="phoneNumber" placeholder="Phone Number" name="subject" class="form-control">
 
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="md-form mb-0">
-                                                    <input type="text" id="subject" placeholder="Designation" name="subject" class="form-control">
+                                                    <input type="text" id="designation" placeholder="Designation" name="subject" class="form-control">
 
                                                 </div>
                                             </div>
@@ -534,7 +541,7 @@
                                         <!--Grid row-->
 
                                         <div class="ml-auto float-right">
-                                            <a class="btn btn-secondary ml-auto">Submit</a>
+                                            <button onclick='sendMail()' class="btn btn-secondary ml-auto">Submit</button>
                                         </div>
                                     </form>
 

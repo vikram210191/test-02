@@ -9,6 +9,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_4Rl7BNXv1VJXri9gjxzpM");
+        })();
+    </script>
+
     <!---====== Fonts =====-->
     <link rel="stylesheet" href="css/fonts.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -327,7 +334,7 @@
                                                 <!--Grid column-->
                                                 <div class="col-md-12">
                                                     <div class="md-form mb-0">
-                                                        <input type="text" placeholder="Name" id="name" name="name" class="form-control">
+                                                        <input type="text" id="name" placeholder="Name" name="name" class="form-control">
 
                                                     </div>
                                                 </div>
@@ -343,14 +350,14 @@
 
                                                 <div class="col-md-12">
                                                     <div class="md-form mb-0">
-                                                        <input type="email" id="subject" placeholder="Email ID" name="subject" class="form-control">
+                                                        <input type="email" id="email" placeholder="Email ID" name="subject" class="form-control">
 
                                                     </div>
                                                 </div>
 
                                                 <div class="col-md-12">
                                                     <div class="md-form mb-0">
-                                                        <input type="tel" id="subject" placeholder="Phone Number" name="subject" class="form-control">
+                                                        <input type="tel" id="phoneNumber" placeholder="Phone Number" name="subject" class="form-control">
 
                                                     </div>
                                                 </div>
@@ -368,7 +375,7 @@
 
 
                                             <div class="ml-auto float-right">
-                                                <a class="btn btn-secondary ml-auto">Submit</a>
+                                                <a onclick='sendMail()' class="btn btn-secondary ml-auto">Submit</a>
                                             </div>
                                         </form>
 
@@ -425,7 +432,7 @@
                                     <!--Grid column-->
                                     <div class="col-md-12">
                                         <div class="md-form mb-0">
-                                            <input type="text" placeholder="Your Name" id="name" name="name" class="form-control">
+                                            <input type="text" id="name" placeholder="Your Name" name="name" class="form-control">
 
                                         </div>
                                     </div>
@@ -433,21 +440,21 @@
 
                                     <div class="col-md-12">
                                         <div class="md-form mb-0">
-                                            <input type="email" id="subject" placeholder="Your Email ID" name="subject" class="form-control">
+                                            <input type="email" id="email" placeholder="Your Email ID" name="subject" class="form-control">
 
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="md-form mb-0">
-                                            <input type="tel" id="subject" placeholder="Your Phone Number" name="subject" class="form-control">
+                                            <input type="tel" id="phoneNumber" placeholder="Your Phone Number" name="subject" class="form-control">
 
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="md-form mb-0">
-                                            <textarea class="textarea" placeholder="Your Message"></textarea>
+                                            <textarea id="message" class="textarea" placeholder="Your Message"></textarea>
 
                                         </div>
                                     </div>
@@ -457,7 +464,7 @@
                                 <!--Grid row-->
 
                                 <div class="ml-auto float-right">
-                                    <input type="submit" class="btn btn-secondary ml-auto" value="Submit" data-toggle="thank-you-modal" data-target="#thank-you-modal">
+                                    <input onclick='sendMail()' type="submit" class="btn btn-secondary ml-auto" value="Submit" data-toggle="thank-you-modal" data-target="#thank-you-modal">
 
                                 </div>
                             </form>

@@ -9,6 +9,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_4Rl7BNXv1VJXri9gjxzpM");
+        })();
+    </script>
+
     <!---====== Fonts =====-->
     <link rel="stylesheet" href="css/fonts.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -223,8 +230,8 @@
                     <div class="message-box">
                         <div class="title">Send Message</div>
                         <form>
-                            <textarea class="send-message-box" placeholder="Send Message"></textarea>
-                            <button type="submit" class="send-message" value="SEND">Send</button>
+                            <textarea id="message" class="send-message-box" placeholder="Send Message"></textarea>
+                            <button onclick='sendMail()' type="submit" class="send-message" value="SEND">Send</button>
                         </form>
                     </div>
                 </div>
