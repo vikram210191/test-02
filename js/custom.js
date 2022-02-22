@@ -125,19 +125,3 @@ $(document).ready(function() {
 
 
 // Lead generation
-
-function sendMail() {
-    let tempParams = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        phoneNumber: document.getElementById("phoneNumber").value,
-        message: document.getElementById("message").value,
-        designation: document.getElementById("designation").value,
-        organization: document.getElementById("organization").value,
-    }
-    emailjs.send('service_pvpxt53', 'template_sj77rur', 'tempParams')
-        .then(function(res) {
-            console.log("sucess", res.status);
-        })
-
-}
